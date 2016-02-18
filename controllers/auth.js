@@ -48,4 +48,9 @@ router.post('/login', function(req, res) {
   });
 });
 
+router.get('/logout', function(req, res) {
+	req.session.userId = false;
+	res.redirect("/");
+});
+
 module.exports = router;
